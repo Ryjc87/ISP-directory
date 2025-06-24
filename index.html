@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Company Directory</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #4b6cb7, #8e44ad);
+      color: white;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      text-align: center;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+    h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    main {
+      padding: 2rem;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 0.8rem;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background-color: rgba(255, 255, 255, 0.1);
+    }
+    th, td {
+      padding: 1rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    th {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    a {
+      color: #aeeaff;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #ffffff;
+    }
+    img {
+      height: 40px;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+    @media (max-width: 600px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+      td {
+        padding: 0.5rem 1rem;
+        border: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Company Directory</h1>
+  </header>
+  <main>
+    <input type="text" id="searchInput" placeholder="Search for a company or number...">
+
+    <table id="companyTable">
+      <thead>
+        <tr>
+          <th>Company</th>
+          <th>Contact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <img src="cityfibre-logo.png" alt="CityFibre Logo">
+            <a href="https://cityfibre.com" target="_blank">CityFibre</a>
+          </td>
+          <td><a href="tel:+441234567890">+44 1234 567890</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </main>
+
+  <script>
+    const searchInput = document.getElementById('searchInput');
+    const table = document.getElementById('companyTable');
+    searchInput.addEventListener('keyup', function () {
+      const filter = searchInput.value.toLowerCase();
+      const rows = table.getElementsByTagName('tr');
+      for (let i = 1; i < rows.length; i++) {
+        const cells = rows[i].getElementsByTagName('td');
+        let match = false;
+        for (let j = 0; j < cells.length; j++) {
+          if (cells[j].innerText.toLowerCase().includes(filter)) {
+            match = true;
+            break;
+          }
+        }
+        rows[i].style.display = match ? '' : 'none';
+      }
+    });
+  </script>
+</body>
+</html>
