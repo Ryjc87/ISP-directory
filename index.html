@@ -42,6 +42,18 @@
 <body>
   <h2>ISP Contact Directory</h2>
   <input type="text" id="searchBar" placeholder="Search ISPs..." onkeyup="filterContacts()" style="display: block; margin: 2rem auto; padding: 0.5rem 1rem; width: 80%; max-width: 500px; font-size: 1rem; border: 2px solid #007acc; border-radius: 8px;">
+<script>
+  function filterContacts() {
+    const input = document.getElementById('searchBar');
+    const filter = input.value.toLowerCase();
+    const listItems = document.querySelectorAll('#ispList li');
+
+    listItems.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      item.style.display = text.includes(filter) ? '' : 'none';
+    });
+  }
+</script>
 
   <ul class="contact-list">
     <li><strong>4th Utility ISP Limited</strong><br><a href="tel:+443338884050">0333 888 4050</a></li>
