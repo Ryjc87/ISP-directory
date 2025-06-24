@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <style>
+  #top-right-text {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    font-weight: bold;
+    font-size: 32px; /* Change this to make it bigger */
+    font-family: Arial, sans-serif;
+    color: #333;
+    z-index: 1000;
+  }
+</style>
+
   <meta charset="UTF-8">
   <title>ISP Directory</title>
  <style>
@@ -61,7 +74,7 @@
   </style>
 </head>
 <body>
-  <div id="top-left-text">Cityfibre</div>
+  <div id="top-right-text">Cityfibre</div>
 
   <h2>ISP Contact Directory</h2>
   <input type="text" id="searchBar" placeholder="Search ISPs..." onkeyup="filterContacts()" style="display: block; margin: 2rem auto; padding: 0.5rem 1rem; width: 80%; max-width: 500px; font-size: 1rem; border: 2px solid #007acc; border-radius: 8px;">
