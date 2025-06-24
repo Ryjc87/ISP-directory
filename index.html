@@ -43,6 +43,20 @@
   <h2>ISP Contact Directory</h2>
   <input type="text" id="searchBar" placeholder="Search ISPs..." onkeyup="filterContacts()" style="display: block; margin: 2rem auto; padding: 0.5rem 1rem; width: 80%; max-width: 500px; font-size: 1rem; border: 2px solid #007acc; border-radius: 8px;">
 <script>
+  <script>
+  function filterContacts() {
+    const input = document.getElementById('searchBar');
+    const filter = input.value.toLowerCase();
+    // Update this selector to match your actual container/list of ISPs
+    const listItems = document.querySelectorAll('#ispList li');
+
+    listItems.forEach(item => {
+      const text = item.textContent.toLowerCase();
+      item.style.display = text.includes(filter) ? '' : 'none';
+    });
+  }
+</script>
+
   function filterContacts() {
     const input = document.getElementById('searchBar');
     const filter = input.value.toLowerCase();
