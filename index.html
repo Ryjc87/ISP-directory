@@ -1,170 +1,62 @@
-<a href="https://www.trustpilot.com/review/cityfibre.com" target="_blank">Review us on Trustpilot</a><!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  .contact-list {
-  list-style: none;
-  padding: 0;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.contact-list li {
-  background-color: #e6f0ff; /* Soft light blue */
-  border-left: 6px solid #007acc; /* Strong blue accent */
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border-radius: 10px;
-  font-family: Arial, sans-serif;
-  color: #003366; /* Deep navy text */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-}
-
-.contact-list strong {
-  font-size: 1.1em;
-}
-
-.contact-list a {
-  color: #005bbb; /* Bold blue link */
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.contact-list a:hover {
-  text-decoration: underline;
-  color: #003366;
-}
-
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Company Directory</title>
+  <meta charset="UTF-8">
+  <title>ISP Directory</title>
   <style>
     body {
+      background-color: #f0f8ff;
       font-family: Arial, sans-serif;
-      background: linear-gradient(to right, #4b6cb7, #8e44ad);
-      color: white;
-      margin: 0;
-      padding: 0;
+      margin: 2rem;
     }
-    header {
+    h2 {
       text-align: center;
-      padding: 2rem;
-      background-color: rgba(0, 0, 0, 0.2);
+      color: #003366;
     }
-    h1 {
-      margin: 0;
-      font-size: 2.5rem;
+    .contact-list {
+      list-style: none;
+      padding: 0;
+      max-width: 800px;
+      margin: 2rem auto;
     }
-    main {
-      padding: 2rem;
-    }
-    input[type="text"] {
-      width: 100%;
-      padding: 0.8rem;
-      margin-bottom: 1.5rem;
-      font-size: 1rem;
-      border: none;
-      border-radius: 8px;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      background-color: rgba(255, 255, 255, 0.1);
-    }
-    th, td {
+    .contact-list li {
+      background-color: #e6f0ff;
+      border-left: 6px solid #007acc;
+      margin-bottom: 1rem;
       padding: 1rem;
-      text-align: left;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      color: #003366;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
     }
-    th {
-      background-color: rgba(0, 0, 0, 0.3);
+    .contact-list a {
+      color: #005bbb;
+      font-weight: bold;
+      text-decoration: none;
     }
-    a {
-      color: #aeeaff;
+    .contact-list a:hover {
       text-decoration: underline;
-    }
-    a:hover {
-      color: #ffffff;
-    }
-    img {
-      height: 40px;
-      vertical-align: middle;
-      margin-right: 10px;
-    }
-    @media (max-width: 600px) {
-      table, thead, tbody, th, td, tr {
-        display: block;
-      }
-      td {
-        padding: 0.5rem 1rem;
-        border: none;
-      }
+      color: #003366;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Company Directory</h1>
-  </header>
-  <main>
-    <input type="text" id="searchInput" placeholder="Search for a company or number...">
-
-    <table id="companyTable">
-      <thead>
-        <tr>
-          <th>Company</th>
-          <th>Contact</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>
-            <img src="cityfibre-logo.png" alt="CityFibre Logo">
-            <a href="https://cityfibre.com" target="_blank">CityFibre</a>
-          </td>
-          <td><a href="tel:+441234567890">+44 1234 567890</a></td>
-        </tr>
-      </tbody>
-    </table>
-  </main>
-
-  <script>
-    const searchInput = document.getElementById('searchInput');
-    const table = document.getElementById('companyTable');
-    searchInput.addEventListener('keyup', function () {
-      const filter = searchInput.value.toLowerCase();
-      const rows = table.getElementsByTagName('tr');
-      for (let i = 1; i < rows.length; i++) {
-        const cells = rows[i].getElementsByTagName('td');
-        let match = false;
-        for (let j = 0; j < cells.length; j++) {
-          if (cells[j].innerText.toLowerCase().includes(filter)) {
-            match = true;
-            break;
-          }
-        }
-        rows[i].style.display = match ? '' : 'none';
-      }
-    });
-  </script>
+  <h2>ISP Contact Directory</h2>
+  <ul class="contact-list">
+    <li><strong>4th Utility ISP Limited</strong><br><a href="tel:+443338884050">0333 888 4050</a></li>
+    <li><strong>Aerial Direct Limited</strong><br><a href="tel:+441329558558">01329 558 558</a></li>
+    <li><strong>AllPoints Fibre Networks Ltd</strong><br><a href="tel:+448005385542">0800 538 5542</a></li>
+    <li><strong>Andrews & Arnold LTD</strong><br><a href="tel:+441344400000">01344 400 000</a></li>
+    <!-- Add more entries as needed -->
+  </ul>
 </body>
 </html>
-.contact-list {
-  list-style: none;
-  padding: 0;
-  max-width: 800px;
-}
-.contact-list li {
-  background-color: #f4f4f4;
-  margin-bottom: 1rem;
-  padding: 1rem;
-  border-radius: 8px;
-  font-family: Arial, sans-serif;
-}
-.contact-list a {
-  color: #0066cc;
-  font-weight: bold;
-  text-decoration: none;
-}
-.contact-list a:hover {
-  text-decoration: underline;
-}
+
+ 
+  
+   
+     
+      
+ 
+  
+ 
+  
