@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>ISP Directory</title>
   <style>
     body {
@@ -41,89 +41,29 @@
 </head>
 <body>
   <h2>ISP Contact Directory</h2>
-  <input type="text" id="searchBar" placeholder="Search ISPs..." onkeyup="filterContacts()" style="display: block; margin: 2rem auto; padding: 0.5rem 1rem; width: 80%; max-width: 500px; font-size: 1rem; border: 2px solid #007acc; border-radius: 8px;">
-<script>
-  <script>
-  function filterContacts() {
-    const input = document.getElementById('searchBar');
-    const filter = input.value.toLowerCase();
-    // Update this selector to match your actual container/list of ISPs
-    const listItems = document.querySelectorAll('#ispList li');
 
-    listItems.forEach(item => {
-      const text = item.textContent.toLowerCase();
-      item.style.display = text.includes(filter) ? '' : 'none';
-    });
-  }
-</script>
-
-  function filterContacts() {
-    const input = document.getElementById('searchBar');
-    const filter = input.value.toLowerCase();
-    const listItems = document.querySelectorAll('#ispList li');
-
-    listItems.forEach(item => {
-      const text = item.textContent.toLowerCase();
-      item.style.display = text.includes(filter) ? '' : 'none';
-    });
-  }
-</script>
+  <input
+    type="text"
+    id="searchBar"
+    placeholder="Search ISPs..."
+    onkeyup="filterContacts()"
+    style="
+      display: block;
+      margin: 2rem auto;
+      padding: 0.5rem 1rem;
+      width: 80%;
+      max-width: 500px;
+      font-size: 1rem;
+      border: 2px solid #007acc;
+      border-radius: 8px;
+    "
+  />
 
   <ul class="contact-list">
-    <li><strong>4th Utility ISP Limited</strong><br><a href="tel:+443338884050">0333 888 4050</a></li>
-    <li><strong>Aerial Direct Limited</strong><br><a href="tel:+441329558558">01329 558 558</a></li>
-    <li><strong>AllPoints Fibre Networks Ltd</strong><br><a href="tel:+448005385542">0800 538 5542</a></li>
-    <li><strong>Andrews & Arnold LTD</strong><br><a href="tel:+441344400000">01344 400 000</a></li>
-  <li><strong>Briant Broadband Limited</strong><br><a href="tel:+441903221999">01903 221 999</a></li>
-  <li><strong>Brillband Limited</strong><br><a href="https://wa.me/447403939590" target="_blank">07403 939590 (WhatsApp)</a></li>
-  <li><strong>Converged Communications Solutions Limited</strong><br><a href="tel:+441224656380">01224 656 380</a></li>
-  <li><strong>DSV Communications Limited T/A The One Broadband</strong><br><a href="tel:+443309128150">0330 912 8150</a></li>
-  <li><strong>Exponential E Ltd</strong><br><a href="tel:+448454704001">0845 470 4001</a></li>
-  <li><strong>Fibrecast</strong><br><a href="tel:+443331123090">03331 123 090</a></li>
-  <li><strong>FlexGrid Ltd</strong><br><a href="tel:+443452221414">0345 222 1414</a></li>
-  <li><strong>Fusion Fibre Group Ltd</strong><br><a href="tel:+443333057560">0333 305 7560</a></li>
-  <li><strong>Giacom (Communications) Ltd</strong><br><a href="tel:+443304333888">03304 333 888</a></li>
-  <li><strong>High Tide Consulting Limited</strong><br><a href="tel:+441429818332">01429 818 332</a></li>
-  <li><strong>Highland Network Ltd</strong><br><a href="tel:+443302369900">0330 236 9900</a></li>
-  <li><strong>ICUK Computing Services Ltd</strong><br><a href="tel:+443450099175">0345 009 9175</a></li>
-  <li><strong>IDNet</strong><br><a href="tel:+448003317000">0800 331 7000</a></li>
-  <li><strong>IP River Limited</strong><br><a href="tel:+443300553554">03300 553 554</a></li>
-  <li><strong>LF Holdco2 Ltd t/a Lightning Fibre</strong><br><a href="tel:+441323380260">01323 380260</a></li>
-  <li><strong>Link Broadband Limited</strong><br><a href="tel:+442033404050">020 33 40 4050</a></li>
-  <li><strong>Lit Fibre Limited</strong><br><a href="tel:+443304604610">0330 460 4610</a></li>
-  <li><strong>Monkey Tree Hosting Limited</strong><br><a href="tel:+442033580210">020 3358 0210</a></li>
-  <li><strong>No One Internet Ltd (Trunk Networks)</strong><br><a href="tel:+441403216133">01403 216133</a></li>
-  <li><strong>Octaplus Networks Limited</strong><br><a href="tel:+443337729009">0333 772 9009</a></li>
-  <li><strong>Redshelf Limited t/a Intouch Systems</strong><br><a href="tel:+441603425209">01603 425209</a></li>
-  <li><strong>Rocket Fibre Limited</strong><br><a href="tel:+443301227711">0330 122 7711</a></li>
-  <li><strong>Sky UK Limited</strong><br><a href="tel:+443337594830">0333 759 4830</a></li>
-  <li><strong>Southern Communications Group (SCG)</strong><br><a href="tel:+443338008080">0333 800 8080</a></li>
-  <li><strong>Stream Networks Ltd</strong><br><a href="tel:+441635884170">01635 884170</a></li>
-  <li><strong>Talk Straight Limited</strong><br><a href="tel:+441133222333">01133 222 333</a></li>
-  <li><strong>TalkTalk</strong><br><a href="tel:+443451725132">03451 725 132</a></li>
-  <li><strong>Toob</strong><br><a href="tel:+442393009300">02393 009300</a></li>
-  <li><strong>Triangle Networks Ltd</strong><br><a href="tel:+441275871122">01275 871122</a></li>
-  <li><strong>Vaioni Group Limited</strong><br><a href="tel:+441616729900">0161 672 9900</a></li>
-  <li><strong>VeloxServ Communications Ltd</strong><br><a href="tel:+448000843521">0800 084 3521</a></li>
-  <li><strong>Vfast Limited</strong><br><a href="tel:+441227668901">01227 668901</a></li>
-  <li><strong>Vodafone Limited (FTTH)</strong><br><a href="tel:+443333040191">0333 304 0191</a></li>
-  <li><strong>Voip-Un Limited</strong><br><a href="tel:+441202612000">01202 612 000</a></li>
-  <li><strong>Wide FM Limited</strong><br><a href="tel:+441202332331">01202 332331</a></li>
-  <li><strong>Yayzi Broadband Ltd</strong><br><a href="tel:+442075203814">020 7520 3814</a></li>
-  <li><strong>YouFibre</strong><br><a href="tel:+443308222222">0330 822 2222</a></li>
-  <li><strong>Zen Internet Ltd</strong><br><a href="tel:+441706902000">01706 902000</a></li>
-</ul>
-
-  </ul>
-</body>
-</html>
-
- 
-  
-   
-     
-      
- 
-  
- 
-  
+    <li><strong>4th Utility ISP Limited</strong><br /><a href="tel:+443338884050">0333 888 4050</a></li>
+    <li><strong>Aerial Direct Limited</strong><br /><a href="tel:+441329558558">01329 558 558</a></li>
+    <li><strong>AllPoints Fibre Networks Ltd</strong><br /><a href="tel:+448005385542">0800 538 5542</a></li>
+    <li><strong>Andrews & Arnold LTD</strong><br /><a href="tel:+441344400000">01344 400 000</a></li>
+    <li><strong>Briant Broadband Limited</strong><br /><a href="tel:+441903221999">01903 221 999</a></li>
+    <li><strong>Brillband Limited</strong><br /><a href="https://wa.me/447403939590" target="_blank">07403 939590 (WhatsApp)</a></li>
+    <li><strong>Converged Communications Solutions Limited</strong
